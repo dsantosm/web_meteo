@@ -1,20 +1,32 @@
 <html>
 <head>
 <body>  
- <h3>Click the check boxes to toggle series visibility</h3>
+ <h3>Click en cajas para seleccionar parámetros</h3>
   <div id="graphdiv2" style="width:800px; height:600px;"></div> 
 
     <p><b>Show Series:</b></p>
     <p>
       <input type=checkbox id="0" checked onClick="change(this)">
-      <label for="0"> T max</label><br/>
+      <label for="0"> Max T x</label><br/>
       <input type=checkbox id="1" checked onClick="change(this)">
-      <label for="1"> T mean</label><br/>
+      <label for="1"> Mean T</label><br/>
       <input type=checkbox id="2" checked onClick="change(this)">
-      <label for="2"> T min</label>
+      <label for="2"> Min T</label>
+      <input type=checkbox id="3" onClick="change(this)">
+      <label for="3"> Dew Point </label><br/>
+      <input type=checkbox id="4" onClick="change(this)">
+      <label for="4"> Mean Dew Point</label><br/>
+      <input type=checkbox id="5" onClick="change(this)">
+      <label for="5"> Min Dew Point</label>
+      <input type=checkbox id="6" onClick="change(this)">
+      <label for="6"> Max Humidity </label><br/>
+      <input type=checkbox id="7" onClick="change(this)">
+      <label for="7"> Mean Humidity Point</label><br/>
+      <input type=checkbox id="8" onClick="change(this)">
+      <label for="8"> Min Humidity Point</label>
     </p>
-
-    <p>g.visibility() = <span id="visibility"></span></p>
+    
+// <p>g.visibility() = <span id="visibility"></span></p>
 
   
 <script type="text/javascript"
