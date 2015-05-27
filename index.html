@@ -6,7 +6,7 @@
 
     <p><b>Show Series:</b></p>
     <p>
-      <input type=checkbox id="0" onClick="change(this)">
+      <input type=checkbox id="0" checked onClick="change(this)">
       <label for="0"> T max</label><br/>
       <input type=checkbox id="1" checked onClick="change(this)">
       <label for="1"> T mean</label><br/>
@@ -27,7 +27,7 @@
     document.getElementById("graphdiv2"),
     "Valencia.csv", // path to CSV file
     {title: 'SYNOP Valencia (Aeropuerto)',
-     visibility: [true, false, true, false, false, false, false, false, false, false, 
+     visibility: [true, true, true, false, false, false, false, false, false, false, 
                   false, false, false, false, false, false, false, false, false, false, 
                   false, false ]
     }          // options
