@@ -36,11 +36,11 @@
 
       function setStatus() {
         document.getElementById("visibility").innerHTML =
-          g.visibility().toString();
+          g2.visibility().toString();
       }
 
       function change(el) {
-        g.setVisibility(parseInt(el.id), el.checked);
+        g2.setVisibility(parseInt(el.id), el.checked);
         setStatus();
       }
 </script>
