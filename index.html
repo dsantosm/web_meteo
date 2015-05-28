@@ -55,6 +55,27 @@
         g2.setVisibility(parseInt(el.id), el.checked);
         setStatus();
       }
+   g3 = new Dygraph(
+    document.getElementById("graphdiv3"),
+    "Valencia.csv", // path to CSV file
+    {//title: 'SYNOP Valencia (Aeropuerto)',
+     visibility: [false, false, false, false, false, false, true, true, true, false, 
+                  false, false, false, false, false, false, false, false, false, false, 
+                  false, false ]
+    }          // options
+  );
+   setStatus();
+
+      function setStatus() {
+        document.getElementById("visibility").innerHTML =
+          g3.visibility().toString();
+      }
+
+      function change(el) {
+        g3.setVisibility(parseInt(el.id), el.checked);
+        setStatus();
+      }   
+      
 </script>
 </body>
 </html>
