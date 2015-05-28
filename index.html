@@ -51,18 +51,7 @@
                   false, false ]
     }          // options
   );
-   setStatus();
 
-      function setStatus() {
-        document.getElementById("visibility").innerHTML =
-          g2.visibility().toString();
-      }
-
-      function change(el) {
-        g2.setVisibility(parseInt(el.id), el.checked);
-        setStatus();
-      }
-   
    g3 = new Dygraph(
     document.getElementById("graphdiv3"),
     "Valencia.csv", // path to CSV file
@@ -80,8 +69,13 @@
       }
 
       function change(el) {
-        g3.setVisibility(parseInt(el.id), el.checked);
-        setStatus();
+        if (el.id in [0,1,2,3,4,5,6,7,8]) {
+        g2.setVisibility(parseInt(el.id), el.checked);}
+        else
+        {
+        g3.setVisibility(parseInt(el.id), el.checked);}  
+        
+   setStatus();
       }   
       
 </script>
