@@ -48,7 +48,19 @@
     {title: 'SYNOP Valencia (Aeropuerto)',
      visibility: [true, true, true, false, false, false, false, false, false, false, 
                   false, false, false, false, false, false, false, false, false, false, 
-                  false, false ]
+                  false, false ],
+     labels: labels.slice(),
+     stackedGraph: isStacked,
+
+     highlightCircleSize: 2,
+     strokeWidth: 1,
+     strokeBorderWidth: isStacked ? null : 1,
+
+     highlightSeriesOpts: {
+         strokeWidth: 3,
+         strokeBorderWidth: 1,
+         highlightCircleSize: 5,
+         }
     }          // options
   );
 
