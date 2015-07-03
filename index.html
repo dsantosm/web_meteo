@@ -86,7 +86,7 @@
 </script>
 
 <h3>Click en cajas para seleccionar parámetros</h3>
-  <div id="graphdiv2" style="width:600px; height:300px;"></div> 
+  <div id="graphdiv4" style="width:600px; height:300px;"></div> 
 
     <p><b>Mostrar parámetros:</b></p>
     <p>
@@ -109,7 +109,7 @@
       <input type=checkbox id="8" onClick="change(this)">
       <label for="8"> Min Humidity Point</label>
     </p>
-  <div id="graphdiv3" style="width:600px; height:300px;"></div>
+  <div id="graphdiv5" style="width:600px; height:300px;"></div>
     <!--  <p>g.visibility() = <span id="visibility"></span></p> -->
     <p><b>Mostrar parámetros:</b></p>
     <p>
@@ -126,8 +126,8 @@
 
 
 <script type="text/javascript">
-  g2 = new Dygraph(
-    document.getElementById("graphdiv2"),
+  g4 = new Dygraph(
+    document.getElementById("graphdiv4"),
     "Gibraltar.csv", // path to CSV file
     {title: 'SYNOP Gibraltar (Airport)',
      visibility: [true, true, true, false, false, false, false, false, false, false, 
@@ -141,8 +141,8 @@
     }          // options
   );
 
-   g3 = new Dygraph(
-    document.getElementById("graphdiv3"),
+   g5 = new Dygraph(
+    document.getElementById("graphdiv5"),
     "Gibraltar.csv", // path to CSV file
     {title: 'SYNOP Gibraltar (Airport)',
      visibility: [false, false, false, false, false, false, false, false, false, true, 
@@ -154,15 +154,15 @@
 
       function setStatus() {
         document.getElementById("visibility").innerHTML =
-          g3.visibility().toString();
+          g4.visibility().toString();
       }
 
       function change(el) {
         if (el.id in [0,1,2,3,4,5,6,7,8]) {
-        g2.setVisibility(parseInt(el.id), el.checked);}
+        g4.setVisibility(parseInt(el.id), el.checked);}
         else
         {
-        g3.setVisibility(parseInt(el.id), el.checked);}  
+        g5.setVisibility(parseInt(el.id), el.checked);}  
         
    setStatus();
       }   
