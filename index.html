@@ -124,51 +124,7 @@
   src="javascripts/dygraph-combined-dev.js"></script>
 </head>
 
-<!
-<script type="text/javascript">
-  g4 = new Dygraph(
-    document.getElementById("graphdiv4"),
-    "Gibraltar.csv", // path to CSV file
-    {title: 'SYNOP Gibraltar (Airport)',
-     visibility: [true, true, true, false, false, false, false, false, false, false, 
-                  false, false, false, false, false, false, false, false, false, false, 
-                  false, false ],
-     highlightSeriesOpts: {
-         strokeWidth: 3,
-         strokeBorderWidth: 1,
-         highlightCircleSize: 5,
-         }
-    }          // options
-  );
 
-   g5 = new Dygraph(
-    document.getElementById("graphdiv5"),
-    "Gibraltar.csv", // path to CSV file
-    {title: 'SYNOP Gibraltar (Airport)',
-     visibility: [false, false, false, false, false, false, false, false, false, true, 
-                  true, true, false, false, false, false, false, false, false, false, 
-                  false, false ],
-    }          // options
-  );
-   setStatus();
-
-      function setStatus() {
-        document.getElementById("visibility").innerHTML =
-          g4.visibility().toString();
-      }
-
-      function change(el) {
-        if (el.id in [0,1,2,3,4,5,6,7,8]) {
-        g4.setVisibility(parseInt(el.id), el.checked);}
-        else
-        {
-        g5.setVisibility(parseInt(el.id), el.checked);}  
-        
-   setStatus();
-      }   
-      
-</script> 
->
 </body>
 </html>
 
